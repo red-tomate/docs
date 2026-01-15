@@ -57,12 +57,18 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
-        title: 'Tomate Docs',
+        title: 'Tomate',
         logo: {
           alt: 'Tomate Logo',
           src: 'img/logo.svg',
         },
+        style: 'dark',
         items: [
           {
             type: 'docSidebar',
@@ -71,15 +77,11 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://github.com/tomate/docs',
+            href: 'https://github.com/red-tomate/',
             label: 'GitHub',
             position: 'right',
           },
         ],
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     }),
 };

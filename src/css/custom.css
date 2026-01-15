@@ -4,27 +4,84 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dashboard-inspired styling */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Red accent colors matching dashboard */
+  --ifm-color-primary: #ef4444; /* red-500 */
+  --ifm-color-primary-dark: #dc2626; /* red-600 */
+  --ifm-color-primary-darker: #b91c1c; /* red-700 */
+  --ifm-color-primary-darkest: #991b1b; /* red-800 */
+  --ifm-color-primary-light: #f87171; /* red-400 */
+  --ifm-color-primary-lighter: #fca5a5; /* red-300 */
+  --ifm-color-primary-lightest: #fecaca; /* red-200 */
+  
+  /* Dark background */
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  
+  /* Text colors */
+  --ifm-font-color-base: #d1d5db; /* gray-300 */
+  --ifm-font-color-secondary: #9ca3af; /* gray-400 */
+  
+  /* Borders */
+  --ifm-border-color: rgba(127, 29, 29, 0.3); /* red-900/30 */
+  
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(239, 68, 68, 0.1); /* red-500/10 */
+  
+  /* Use monospace font */
+  --ifm-font-family-base: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddc2;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Dark theme (default for dashboard style) */
+[data-theme='dark'],
+:root {
+  --ifm-color-primary: #ef4444; /* red-500 */
+  --ifm-color-primary-dark: #dc2626;
+  --ifm-color-primary-darker: #b91c1c;
+  --ifm-color-primary-darkest: #991b1b;
+  --ifm-color-primary-light: #f87171;
+  --ifm-color-primary-lighter: #fca5a5;
+  --ifm-color-primary-lightest: #fecaca;
+  
+  --ifm-background-color: #000000;
+  --ifm-background-surface-color: #000000;
+  
+  --ifm-font-color-base: #d1d5db;
+  --ifm-font-color-secondary: #9ca3af;
+  
+  --ifm-border-color: rgba(127, 29, 29, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(239, 68, 68, 0.1);
+}
+
+/* Override navbar and sidebar to match dashboard */
+.navbar {
+  background-color: #000000;
+  border-bottom: 1px solid rgba(127, 29, 29, 0.3);
+}
+
+.navbar__title,
+.navbar__item {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Sidebar styling */
+.theme-doc-sidebar-container {
+  background-color: #000000;
+  border-right: 1px solid rgba(127, 29, 29, 0.3);
+}
+
+.theme-doc-sidebar-menu {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Links hover effect */
+a:hover {
+  color: #ef4444; /* red-500 */
 }
